@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Bot Commands</title>
+</head>
+<body>
+    <div id="commands-list">
+        <button onclick="displayCommandDetails('help')">Help</button>
+        <!-- Voeg hier andere knoppen toe voor je andere commando's -->
+    </div>
+    <div id="command-details">
+        <!-- Command details (syntax en uitleg) worden hier weergegeven -->
+    </div>
+
+    <script>
+        function displayCommandDetails(commandName) {
+            const commandDetails = document.getElementById('command-details');
+
+            // Vervang dit met je werkelijke commando-informatie
+            const command = {
+                name: 'help',
+                syntax: '!help',
+                description: 'List all available commands.'
+            };
+
+            if (command.name === commandName) {
+                commandDetails.innerHTML = `
+                    <h2>${command.name}</h2>
+                    <p><strong>Syntax:</strong> ${command.syntax}</p>
+                    <p><strong>Description:</strong> ${command.description}</p>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
+
